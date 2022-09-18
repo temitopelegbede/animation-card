@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+h1{
+  letter-spacing: .6rem;
+  color: rebeccapurple;
+  font-weight: 800;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.card{
+  width: 400px;
+  height: auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  animation: card 2s ease-in-out -3s infinite alternate;
+  /* background-color: rebeccapurple; */
+  background-image: url(./flower.jpeg);
+  color: #fff;
+  /* transition: transform 200ms ease-in-out; */
+}
+/* .card:hover{
+  transform: translateX();
+} */
+@keyframes card {
+  0%{
+    /* background-color: rebeccapurple; */
+    background-image: url(./flower.jpeg);
+  }
+  25%{
+    /* background-color: dodgerblue; */
+    background-image: url(./laptop-1.jpeg);
+  }
+  75%{
+    /* background-color: orange; */
+    background-image: url(./laptop-2.jpeg);
+  }
+  100%{
+    /* background-color: lightcoral; */
+    background-image: url(./nature.jpeg);
+  }
+  
+}
+@media (min-width: 2040px) {
+  .card-container{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 2040px) {
+  .card{
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .card{
+    font-size: 1.5rem;
+  }
+}
